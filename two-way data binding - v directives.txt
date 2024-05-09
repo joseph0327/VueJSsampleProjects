@@ -1,0 +1,39 @@
+#v-model: Creates two-way data binding on form input elements.
+
+<input type="text" v-model="message">
+
+#v-for: Renders a list of items based on an array.
+<ul>
+  <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+</ul>
+
+#v-if: Conditionally renders an element based on a truthy value.
+<div v-if="isVisible">Visible Content</div>
+
+#v-else: Renders an element if the preceding v-if condition evaluates to false.
+<div v-if="isVisible">Visible Content</div>
+<div v-else>Alternate Content</div>
+
+#v-else-if: Adds an alternate condition to an v-if block.
+<div v-if="isLarge">Large Content</div>
+<div v-else-if="isMedium">Medium Content</div>
+<div v-else>Default Content</div>
+
+#v-show: Toggles the display of an element based on a truthy value. Unlike v-if, it toggles CSS display property.
+<div v-show="isVisible">Visible Content</div>
+
+#v-bind: Dynamically binds one or more attributes or a component prop to an expression.
+<button v-bind:disabled="isDisabled">Disabled Button</button>
+
+#v-on: Listens to DOM events and executes a method or expression when the event is triggered.
+<button v-on:click="handleClick">Click me</button>
+
+#v-pre: Skips compilation for this element and all its children. This can be useful for large chunks of static content.
+
+<template v-pre>{{ skipCompilation }}</template>
+
+#v-cloak: This directive remains on the element until the associated Vue instance finishes compilation. Combined with CSS rules, it can be used to hide uncompiled mustache bindings until they are ready to be rendered.
+<div v-cloak>{{ message }}</div>
+
+#v-once: Render the element and component content only once. Subsequent re-renders will skip rendering the element and its children.
+<div v-once>{{ staticContent }}</div>

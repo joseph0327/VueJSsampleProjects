@@ -1,0 +1,13 @@
+vuejs setup
+
+
+#to install
+npm init vue@latest
+
+#to install npm
+cd NotesApp
+npm install
+npm run dev
+
+#to install the router
+npm install vue-router@4
